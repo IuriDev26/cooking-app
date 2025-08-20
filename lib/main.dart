@@ -1,4 +1,6 @@
+import 'package:cooking/routes/app_routes.dart';
 import 'package:cooking/screens/categories_screen.dart';
+import 'package:cooking/screens/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(CookingApp());
@@ -26,9 +28,14 @@ class CookingApp extends StatelessWidget {
             fontFamily: 'RobotoCondensed',
             color: Colors.white,
           ),
+          titleSmall: TextStyle(
+            fontSize: 14,
+            fontFamily: 'RobotoCondensed',
+            color: Colors.white,
+          ),
         ),
       ),
-      home: CategoriesScreen(),
+      routes: AppRoutes.getRoutes()
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:cooking/models/category.dart';
-import 'package:cooking/screens/category_meals_screen.dart';
+import 'package:cooking/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
@@ -8,9 +8,7 @@ class CategoryItem extends StatelessWidget {
   const CategoryItem(this.category, {super.key});
 
   _selectCategory(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => CategoryMealsScreen(nome: 'teste')),
-    );
+    Navigator.of(context).pushNamed(AppRoutes.categoryMeals, arguments: category);
   }
 
   @override
